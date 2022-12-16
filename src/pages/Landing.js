@@ -62,7 +62,6 @@ export const Landing = (props) => {
     //grid data
     //Pagination
     <>
-
       <div className="text-lg font-bold text-gray-900 p-0.5 m-8">
         ** Note: Please Choose the appropriate option from the dropdown before
         Search **

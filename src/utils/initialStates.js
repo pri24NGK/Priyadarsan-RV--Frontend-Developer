@@ -1,4 +1,3 @@
-import { v4 as uuid } from "uuid";
 
 export const InputData = {
   Search_Type: {
@@ -7,7 +6,6 @@ export const InputData = {
       options: [
         { value: "type", displayValue: "type" },
         { value: "status", displayValue: "status " },
-        // { value: "original_launch", displayValue: "original_launch" },
       ],
     },
     value: "type",
@@ -26,13 +24,4 @@ export const InputData = {
     },
     valid: true,
   },
-};
-
-export const initialLaneData = {
-  name: "",
-};
-
-export const createLaneData = {
-  name: "Create New Lane",
-  id: uuid(),
 };

@@ -11,7 +11,7 @@
   box-sizing: border-box;
   transition: all 0.3s ease-out;
   overflow-y: auto;
-  max-height: 60vh;;
+  max-height: 60vh;
   transform: translateY(0);
 }
 

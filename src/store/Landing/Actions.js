@@ -25,22 +25,9 @@ export const getClick = () => {
 
 export const getCapsulesApi = () => {
   return (dispatch) => {
-    /*
-    capsule_id: "dragon1"
-    capsule_serial: "C101"
-    details: "Reentered after three weeks in orbit"
-    landings: 1
-    missions: [{name: 'COTS 1', flight: 7}]
-    original_launch: "2010-12-08T15:43:00.000Z"
-    original_launch_unix: 1291822980
-    reuse_count: 0
-    status: "retired"
-    type: "Dragon 1.0"
-    */
     axios
       .get("/capsules")
       .then((res) => {
-        console.log(res.data);
         let updatedData = res.data.map((item) => {
           let data = {
             ...item,
@@ -68,7 +55,6 @@ export const getCapsuleApi = (id) => {
     axios
       .get("/capsules/" + id)
       .then((res) => {
-        console.log(res.data);
         let updatedData = {
           ...res.data,
           feedBackType: "GET_SINGLE_CAPSULE",
@@ -93,7 +79,6 @@ export const getCapsuleApi = (id) => {
 
 export const searchData = (params, type) => {
   return (dispatch, getState) => {
-    console.log(params, type);
     const capsules = [...getState().Landing.search_capsules];
     if (params.length >= 3) {
       let updatedCapsule = capsules.filter((capsule) => {
@@ -114,7 +99,6 @@ export const sortCapsules = (type, click) => {
   return (dispatch, getState) => {
     const capsules = [...getState().Landing.search_capsules];
     let sortedData = capsules.sort((a, b) => {
-      console.log("sort", a.original_launch_unix, b.original_launch_unix);
       if (type === "original_launch") {
         if (click) {
           return a.original_launch_unix - b.original_launch_unix;
@@ -122,7 +106,7 @@ export const sortCapsules = (type, click) => {
           return b.original_launch_unix - a.original_launch_unix;
         }
       } else {
-        return a-b;
+        return a - b;
       }
     });
     dispatch(getClick());

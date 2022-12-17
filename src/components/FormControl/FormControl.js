@@ -13,6 +13,7 @@ export const FormControl = (props) => {
             onChange={props.changeHandler}
             placeholder={props.placeholder}
             value={props.value}
+            id={props.name}
           />
         </React.Fragment>
       );
@@ -20,7 +21,11 @@ export const FormControl = (props) => {
     }
     case "select": {
       data = (
-        <select value={props.value} onChange={props.changeHandler}>
+        <select
+          value={props.value}
+          onChange={props.changeHandler}
+          id={props.name}
+        >
           {props.elementConfig.options.map((option) => (
             <option key={option.value} value={option.value}>
               {option.displayValue}

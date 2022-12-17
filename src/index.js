@@ -22,6 +22,8 @@ const store = createStore(
 );
 
 axios.defaults.baseURL = "https://api.spacexdata.com/v3";
+// axios.defaults.headers.common['Authorization'] = "AUTH_TOKEN";
+axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 const app = (
   <Provider store={store}>

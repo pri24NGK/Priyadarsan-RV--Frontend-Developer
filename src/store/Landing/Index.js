@@ -1,1 +1,6 @@
-export { getCapsulesApi,getCapsuleApi,searchData,sortCapsules } from "./Actions";
+export {
+  getCapsulesApi,
+  getCapsuleApi,
+  searchData,
+  sortCapsules,
+} from "./Actions";

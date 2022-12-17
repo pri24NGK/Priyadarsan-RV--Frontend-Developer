@@ -5,13 +5,13 @@ select {
   border: 2px solid #ccc !important;
   border-radius: 8px;
   color: black;
-  width:40%;
+  width: 40%;
 }
-input:focus{
+input:focus {
   color: black;
   background-color: rgb(235, 226, 155);
 }
-input:focus::placeholder{
+input:focus::placeholder {
   color: black;
 }
 ::placeholder {

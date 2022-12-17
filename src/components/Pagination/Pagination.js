@@ -42,7 +42,6 @@ export const Pagination = (props) => {
             }`}
             onClick={() => {
               onPageChange(pageNumber);
-              // window.scrollTo(0, 0);
               const list = document.getElementById("capsules_list");
               if (list) list.scrollIntoView();
             }}
